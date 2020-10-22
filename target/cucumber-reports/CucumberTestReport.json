@@ -1,0 +1,92 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4304167437,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Initializer.beforeHooks(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Execute all information from actor table",
+        "description": "",
+        "id": "databse-sql-query-feature;execute-all-information-from-actor-table",
+        "after": [
+          {
+            "result": {
+              "duration": 168058387,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Initializer.afterHooks(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 283397890,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User connects to PostgreSQL",
+            "match": {
+              "location": "SqlQueryStepDefinitions.user_connects_to_PostgreSQL()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 22226517,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "User sends \"select*from public.actor\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "select*from public.actor",
+                  "offset": 12
+                }
+              ],
+              "location": "SqlQueryStepDefinitions.user_sends(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 41737984,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "User should get all information from that table",
+            "match": {
+              "location": "SqlQueryStepDefinitions.user_should_get_all_information_from_that_table()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@sqlquery"
+          }
+        ]
+      }
+    ],
+    "name": "Databse SQL Query Feature",
+    "description": "",
+    "id": "databse-sql-query-feature",
+    "keyword": "Feature",
+    "uri": "Features/DataBaseFeature.feature"
+  }
+]
