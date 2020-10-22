@@ -1,12 +1,55 @@
 [
   {
-    "line": 1,
+    "line": 3,
     "elements": [
+      {
+        "comments": [
+          {
+            "line": 5,
+            "value": "#Any step which is repeated at the beginning of scenarios in one feature can be placed under background keyword"
+          },
+          {
+            "line": 6,
+            "value": "# and it will reduce redundancy"
+          }
+        ],
+        "line": 7,
+        "name": "LoginTest",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2590115597,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on Retail Website",
+            "match": {
+              "location": "LoginTestStepDefinition.user_is_on_Retail_Website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 63676617,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User click on MyAccount",
+            "match": {
+              "location": "LoginTestStepDefinition.user_click_on_MyAccount()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
       {
         "before": [
           {
             "result": {
-              "duration": 4304167437,
+              "duration": 2312260079,
               "status": "passed"
             },
             "match": {
@@ -14,14 +57,14 @@
             }
           }
         ],
-        "line": 4,
-        "name": "Execute all information from actor table",
+        "line": 32,
+        "name": "Login to Retail Site with multiple users",
         "description": "",
-        "id": "databse-sql-query-feature;execute-all-information-from-actor-table",
+        "id": "login-to-retail-website;login-to-retail-site-with-multiple-users;;2",
         "after": [
           {
             "result": {
-              "duration": 168058387,
+              "duration": 102718656,
               "status": "passed"
             },
             "match": {
@@ -30,63 +73,387 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 283397890,
+              "duration": 3791822302,
               "status": "passed"
             },
-            "line": 5,
-            "name": "User connects to PostgreSQL",
+            "line": 26,
+            "name": "User click on login",
             "match": {
-              "location": "SqlQueryStepDefinitions.user_connects_to_PostgreSQL()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 22226517,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "User sends \"select*from public.actor\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "select*from public.actor",
-                  "offset": 12
-                }
-              ],
-              "location": "SqlQueryStepDefinitions.user_sends(String)"
+              "location": "LoginTestStepDefinition.user_click_on_login()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 41737984,
+              "duration": 885521988,
               "status": "passed"
             },
-            "line": 7,
-            "name": "User should get all information from that table",
+            "line": 27,
+            "name": "User enter username \u0027sdet@tekschool.us\u0027 and password \u0027sdet\u0027",
             "match": {
-              "location": "SqlQueryStepDefinitions.user_should_get_all_information_from_that_table()"
+              "arguments": [
+                {
+                  "val": "sdet@tekschool.us",
+                  "offset": 21
+                },
+                {
+                  "val": "sdet",
+                  "offset": 54
+                }
+              ],
+              "location": "LoginTestStepDefinition.user_enter_username_sdet_tekschool_us_and_password_sdet(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 526858110,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User click on login  button",
+            "match": {
+              "location": "LoginTestStepDefinition.user_click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 518743306,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User should be logged into MyAccount dashboard",
+            "match": {
+              "location": "LoginTestStepDefinition.user_should_be_logged_into_MyAccount_dashboard()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 3,
-            "name": "@sqlquery"
+            "line": 1,
+            "name": "@LoginRegression"
+          },
+          {
+            "line": 24,
+            "name": "@MultipleUserLogin"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 5,
+            "value": "#Any step which is repeated at the beginning of scenarios in one feature can be placed under background keyword"
+          },
+          {
+            "line": 6,
+            "value": "# and it will reduce redundancy"
+          }
+        ],
+        "line": 7,
+        "name": "LoginTest",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 2196978663,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on Retail Website",
+            "match": {
+              "location": "LoginTestStepDefinition.user_is_on_Retail_Website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 45074199,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User click on MyAccount",
+            "match": {
+              "location": "LoginTestStepDefinition.user_click_on_MyAccount()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1456813088,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Initializer.beforeHooks(Scenario)"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "Login to Retail Site with multiple users",
+        "description": "",
+        "id": "login-to-retail-website;login-to-retail-site-with-multiple-users;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 94522057,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Initializer.afterHooks(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3786350352,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User click on login",
+            "match": {
+              "location": "LoginTestStepDefinition.user_click_on_login()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 657680781,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "User enter username \u0027consumer@tekschool.us\u0027 and password \u0027JBond\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "consumer@tekschool.us",
+                  "offset": 21
+                },
+                {
+                  "val": "JBond",
+                  "offset": 58
+                }
+              ],
+              "location": "LoginTestStepDefinition.user_enter_username_sdet_tekschool_us_and_password_sdet(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 385273609,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User click on login  button",
+            "match": {
+              "location": "LoginTestStepDefinition.user_click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 501186595,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User should be logged into MyAccount dashboard",
+            "match": {
+              "location": "LoginTestStepDefinition.user_should_be_logged_into_MyAccount_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@LoginRegression"
+          },
+          {
+            "line": 24,
+            "name": "@MultipleUserLogin"
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 5,
+            "value": "#Any step which is repeated at the beginning of scenarios in one feature can be placed under background keyword"
+          },
+          {
+            "line": 6,
+            "value": "# and it will reduce redundancy"
+          }
+        ],
+        "line": 7,
+        "name": "LoginTest",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1991515842,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on Retail Website",
+            "match": {
+              "location": "LoginTestStepDefinition.user_is_on_Retail_Website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 77459692,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User click on MyAccount",
+            "match": {
+              "location": "LoginTestStepDefinition.user_click_on_MyAccount()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1232165209,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Initializer.beforeHooks(Scenario)"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Login to Retail Site with multiple users",
+        "description": "",
+        "id": "login-to-retail-website;login-to-retail-site-with-multiple-users;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 92616156,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Initializer.afterHooks(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3711636213,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User click on login",
+            "match": {
+              "location": "LoginTestStepDefinition.user_click_on_login()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 683007481,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "User enter username \u0027students@tekschool.us\u0027 and password \u0027TEST\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "students@tekschool.us",
+                  "offset": 21
+                },
+                {
+                  "val": "TEST",
+                  "offset": 58
+                }
+              ],
+              "location": "LoginTestStepDefinition.user_enter_username_sdet_tekschool_us_and_password_sdet(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 623990479,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User click on login  button",
+            "match": {
+              "location": "LoginTestStepDefinition.user_click_on_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 534696514,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "User should be logged into MyAccount dashboard",
+            "match": {
+              "location": "LoginTestStepDefinition.user_should_be_logged_into_MyAccount_dashboard()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@LoginRegression"
+          },
+          {
+            "line": 24,
+            "name": "@MultipleUserLogin"
           }
         ]
       }
     ],
-    "name": "Databse SQL Query Feature",
+    "name": "Login to Retail Website",
     "description": "",
-    "id": "databse-sql-query-feature",
+    "id": "login-to-retail-website",
     "keyword": "Feature",
-    "uri": "Features/DataBaseFeature.feature"
+    "uri": "Features/login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@LoginRegression"
+      }
+    ]
   }
 ]

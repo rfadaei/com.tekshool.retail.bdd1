@@ -16,8 +16,8 @@ public class LoginTestStepDefinition extends Base {
 	LoginPageObj loginPageObj = new LoginPageObj();
 	MyAccountPageObj myAccountPageObj = new MyAccountPageObj();
 	
-	@Given("^User is on Retail website$")
-	public void user_is_on_Retail_website() throws Throwable {
+	@Given("^User is on Retail Website$")
+	public void user_is_on_Retail_Website() throws Throwable {
 		// we need to get to retail website.
 		Base.initializeDriver();
 		logger.info("Retail page is opened");
@@ -28,19 +28,20 @@ public class LoginTestStepDefinition extends Base {
 		WebDriverUtility.screenShot();
 	}
 	
-	@When("^User click  on MyAccount$")
+	@When("^User click on MyAccount$")
 	public void user_click_on_MyAccount() throws Throwable {
 		loginPageObj.clickOnMyAccount();
 		logger.info("User click on My Account");
 	}
 	
-	@When("^User click on Login$")
-	public void user_click_on_Login() throws Throwable {
+	@When("^User click on login$")
+	public void user_click_on_login() throws Throwable {
 		loginPageObj.clickOnLogin();
 		logger.info("User click on Login");
 		WebDriverUtility.wait(3000);
 		WebDriverUtility.screenShot();
 	}
+	
 	
 	// in Cucumber in order to pass values from scenario steps as a parameter we
 	// need to replace values with (.+)
@@ -55,33 +56,35 @@ public class LoginTestStepDefinition extends Base {
 		WebDriverUtility.screenShot();
 	}
 	
-	@When("^User click on Login button$")
-	public void user_click_on_Login_button() throws Throwable {
+	
+	@When("^User click on login  button$")
+	public void user_click_on_login_button() throws Throwable {
 		loginPageObj.clickOnLoginButton();
 		logger.info("User click on Login button");
 	}
 	
-	@Then("^User should be logged in to MyAccount dashboard$")
-	public void user_should_be_logged_in_to_MyAccount_dashboard() throws Throwable {
+	
+	@Then("^User should be logged into MyAccount dashboard$")
+	public void user_should_be_logged_into_MyAccount_dashboard() throws Throwable {
 		Assert.assertTrue(myAccountPageObj.isMyAccountDisplayed());
 		Assert.assertTrue(myAccountPageObj.isMyOrdersDisplayed());
 		WebDriverUtility.screenShot();
 	}
 	
-	@And("^User click on Logout$")
+	@And("^User click on logout$")
 	public void user_click_on_logout() throws Throwable {
 		// in order to handle the exception we can use try catch blocks.
 		try {
-			myAccountPageObj.clickOnLogOut();
+				myAccountPageObj.clickOnLogOut();
 		} catch (ElementNotInteractableException e) {
-			myAccountPageObj.clickOnLogOut();
+				myAccountPageObj.clickOnLogOut();
 		}
 	}
 	
-	@Then("^User Should be logged out from MyAccount dashboard$")
-	public void user_should_be_logged_out_from_myAccount_dashboard() throws Throwable {
+	@Then("^User should be logged out from MyAccount dashboard$")
+	public void user_should_be_logged_out_from_MyAccount_dashboard() throws Throwable {
 		Assert.assertTrue(myAccountPageObj.isLogOutConfirmationTextDisplayed());
 		WebDriverUtility.screenShot();
-		WebDriverUtility.wait(5000);
+		WebDriverUtility.wait(5000);  
 	}
 }

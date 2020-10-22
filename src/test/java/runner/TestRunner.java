@@ -9,7 +9,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "classpath:Features", // it tells cucumber where Feature files are stored
 		glue = {"stepDefinitions"}, // glue tells cucumber where step definitions are
-		tags = {"@sqlquery"},// we can run all scenarios or only one scenario using tags
+		tags = {"@MultipleUserLogin"},// we can run all scenarios or only one scenario using tags
 		dryRun = false,// it will check if all scenarios have step definitions
 		monochrome = true, // if set to true, makes console output readable
 		strict = false, //if set true, will fail the execution if there is any step pending or undefined

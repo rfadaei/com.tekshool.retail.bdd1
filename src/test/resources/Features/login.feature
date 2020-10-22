@@ -11,9 +11,10 @@ And User click on MyAccount
 
 @login
 Scenario: log into myAccount
+
 When User click on login
 And User enter username 'sdet@tekschool.us' and password 'sdet'
-And User click on login  utton
+And User click on login  button
 Then User should be logged into MyAccount dashboard
 
 
@@ -24,7 +25,7 @@ Then User should be logged into MyAccount dashboard
 Scenario Outline: Login to Retail Site with multiple users
 When User click on login
 And User enter username '<userName>' and password '<password>'
-And User click on login  utton
+And User click on login  button
 Then User should be logged into MyAccount dashboard
 Examples:
 |userName|password|
@@ -38,8 +39,8 @@ Examples:
 Scenario: log out from myAccount
 When User click on login
 And User enter username 'sdet@tekschool.us' and password 'sdet'
-And User click on login  utton
-And User should be logged into MyAccount dashboar
+And User click on login  button
+And User should be logged into MyAccount dashboard
 And User click on MyAccount
 And User click on logout
 Then User should be logged out from MyAccount dashboard
